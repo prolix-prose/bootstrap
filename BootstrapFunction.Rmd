@@ -8,7 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-This is a function that takes in data and the number of times you want to sample it and outputs the samples and the means of the samples.
+This is a function that takes in data and the number of times you want to sample it and outputs the samples and the means of the samples. It uses the bootstrap method to resample the original data.
 ```{r}
 b.means <- function(data, num) {
     resamples <- lapply(1:num, function(i) sample(data, replace=T))
